@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using root.render()</title>
+
+    <!-- React and ReactDOM via CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      // Create elements
+      const element1 = React.createElement("h1", {}, "This is My First React Assignment!");
+      const element2 = React.createElement("p", {}, "This paragraph is rendered using root.render().");
+
+      // Create a container (React Fragment)
+      const container = React.createElement("div", {}, [element1, element2]);
+
+      // Create root and render content
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(container);
+    </script>
+  </body>
+</html>
